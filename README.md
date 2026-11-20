@@ -8,7 +8,7 @@ Cada celda del cuaderno lleva el mismo número que en el video. Por ejemplo, la 
 
 ```
 notebooks/
-  curso_optimizacion.ipynb · el cuaderno del curso, de la Sección 0 a la 10 (121 celdas de código)
+  curso_optimizacion.ipynb · el cuaderno del curso, de la Sección 0 a la 11 (125 celdas de código)
 ```
 
 El cuaderno no necesita archivos de datos: cada celda define los suyos o los calcula.
@@ -29,6 +29,16 @@ La celda 0.1 imprime las versiones de NumPy y SciPy. Las Secciones 6, 8 y 10 lee
 !pip install -q "scipy>=1.16"
 ```
 
+## La Sección 11 (opcional): Pyomo
+
+Las celdas 11.1 a 11.4 escriben en Pyomo la planta de solventes de la Sección 5. Colab no trae Pyomo: la celda 11.1 lo instala, junto con el optimizador HiGHS, con las versiones fijas con las que se grabó el video:
+
+```
+!pip install -q pyomo==6.10.0 highspy==1.13.1
+```
+
+La instalación dura lo que dura la sesión de Colab. Si abres una sesión nueva, vuelve a correr la celda 11.1 antes de la 11.2. El resto del cuaderno no necesita Pyomo.
+
 ## Sobre los datos y los coeficientes
 
 - **Coeficientes de costo:** son ilustrativos, elegidos para que el orden de magnitud sea realista. No describen ninguna planta en particular.
@@ -40,4 +50,4 @@ La celda 0.1 imprime las versiones de NumPy y SciPy. Las Secciones 6, 8 y 10 lee
 
 ## Versiones con las que se comprobó el cuaderno
 
-Python 3.13 con NumPy 2.3.5, SciPy 1.16.3 y Matplotlib 3.10.6.
+Python 3.13 con NumPy 2.3.5, SciPy 1.16.3 y Matplotlib 3.10.6. La Sección 11, con Pyomo 6.10.0 y highspy 1.13.1.
